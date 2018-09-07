@@ -1,0 +1,49 @@
+.emoji-item {
+  display: flex;
+  padding: 0;
+  min-width: 0;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 2px;
+  .sm-emoji {
+    padding: 2px;
+  }
+  .tg-skin-variations {
+    display: none;
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    flex: 1;
+    margin-top: 40px;
+    z-index: 10;
+  }
+  &:hover {
+    background: #e5e5e5;
+    .tg-skin-variations {
+      display: flex;
+    }
+  }
+
+  .skin-item {
+    display: flex;
+    padding: 0;
+    min-width: 0;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    line-height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background: #e5e5e5;
+    }
+  }
+
+}

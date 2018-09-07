@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { flags } from './emoji-data/flags';
 import { smileysPeople } from './emoji-data/smileys_people';
 import { animalsNature } from './emoji-data/animals_nature';
@@ -7,13 +7,14 @@ import { activities } from './emoji-data/activities';
 import { travelsPlaces } from './emoji-data/travels_places';
 import { objects } from './emoji-data/objects';
 import { symbols } from './emoji-data/symbols';
+declare var $: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   smileysPeople = smileysPeople;
   animalsNature = animalsNature;
@@ -34,6 +35,14 @@ export class AppComponent {
     { emojis: this.symbols, category: 'Symbols', title: 'Символы' },
     { emojis: this.flags, category: 'Flags', title: 'Флаги' }
   ];
+
+  @ViewChild('skinsTrigger') skinsTrigger;
+
+  constructor() {}
+
+  ngOnInit() {
+
+  }
 
   selectEmoji(emoji) {
     console.log(emoji);
